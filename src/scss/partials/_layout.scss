@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: helvetica, sans-serif;
+
+    img {
+        width: 100%;
+        height: 20%;
+    }
+
+    h1 {
+        font-family: 'Arial Black', sans-serif,
+            serif;
+        font-size: 7em;
+        color: #8eaee6;
+    }
+
+    input {
+        color: black;
+    }
+
+    .navigation {
+        background-color: #230031;
+        border-bottom: 5px solid rgb(62, 152, 226);
+
+        .navbar-inverse {
+            background-color: inherit;
+            border: none;
+        }
+
+        button {
+            background-color: transparent;
+            border: 1px solid white;
+            color: #8eaee6;
+            width: 50%;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 1.5em;
+            margin-top: 5%;
+        }
+
+        .navbar-nav {
+            li {
+                a {
+                    margin-top: 5px;
+                    color: #8eaee6;
+                    font-size: 1.5em;
+
+
+                }
+            }
+        }
+    }
+
+    .navbar-nav>li>a:hover {
+        color: red;
+    }
+}
+
+.card {
+    box-shadow: 0px 5px 50px 0.5px #ffffff;
+    margin: 15px;
+    width: 30%;
+    padding: 10px;
+    height: auto;
+
+    img {
+        height: 20%;
+        margin: 5% 0;
+    }
+
+
+}
+
+.error {
+    color: red;
+
+    &_border {
+        border: solid 1px red;
+    }
+
+    &_hide {
+        display: none;
+    }
+}
+
+.accordion {
+    .card {
+        width: 100%;
+    }
+}
