@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-import { ESTABLISHMENTS } from "./../Constants/constant";
-import Cards from "./../Components/cards";
+import Nav from "../../Components/nav2";
+
+import { ESTABLISHMENTS } from "../../Constants/constant";
+import Cards from "../../Components/cards";
 
 export default function Holidaze() {
   const [estData, setestData] = useState(undefined);
@@ -27,7 +29,14 @@ export default function Holidaze() {
     setsearchPhrase(input.target.value);
   }
   return (
-    <div>
+    <div className="[ container-fluid ]">
+      <div>
+        <div className="[ row ] [ navigation ]">
+          <div className="[ col-sm-12 ]">
+            <Nav />
+          </div>
+        </div>
+      </div>
       <div className="[ container-fluid ][ landingPage ]">
         <div className="[ row ]">
           <div className="[ col-sm-12 ]">
@@ -36,7 +45,7 @@ export default function Holidaze() {
         </div>
       </div>
 
-      <div className="[ container ][ blogPage ]">
+      <div className="[ container ]">
         <div className="[ row ]">
           <div className="[ col-sm-12 ]">
             <form>

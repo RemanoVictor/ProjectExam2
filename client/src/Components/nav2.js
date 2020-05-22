@@ -11,13 +11,7 @@ export default function Nav() {
           </Link>
         </li>
         <li>
-          <Link to="/About">About</Link>
-        </li>
-        <li>
           <Link to="/Contact">Contact</Link>
-        </li>
-        <li>
-          <a href="http://192.168.64.2/holidaze/contact.html"> Test </a>
         </li>
         <li>
           <Link to="/Dashboard">Dashboard</Link>

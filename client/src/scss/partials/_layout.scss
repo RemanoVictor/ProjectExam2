@@ -24,8 +24,7 @@ body {
     }
 
     .navigation {
-        background-color: #230031;
-        border-bottom: 5px solid rgb(62, 152, 226);
+        background-color: rgba($color: #000000, $alpha: 0.5);
 
         .navbar-inverse {
             background-color: inherit;

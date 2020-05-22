@@ -6,18 +6,21 @@ export default function Nav() {
     <nav className="navbar navbar-inverse">
       <ul className="nav navbar-nav">
         <li>
-          <Link className="active" to="/">
+          <Link className="active" to="/Dashboard">
             Dashboard
           </Link>
         </li>
         <li>
-          <Link to="/About">About</Link>
+          <Link to="/UserEnquiries">Enquiries</Link>
         </li>
         <li>
-          <Link to="/Contact">Contact</Link>
+          <Link to="/Messages">Messages</Link>
         </li>
         <li>
-          <Link to="/Home">Home</Link>
+          <Link to="/AddVenue">Add Establishment</Link>
+        </li>
+        <li>
+          <Link to="/">Home</Link>
         </li>
       </ul>
     </nav>
