@@ -32,7 +32,7 @@ export default function Login(props) {
           </div>
         </div>
       </div>
-      <div className="bgimage"></div>
+      <div className="bgimage1"></div>
       <div className="container-fluid loginContainer">
         <div className="row">
           <div className="[ col-sm-1 ]"></div>

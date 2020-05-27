@@ -27,7 +27,11 @@ export default function Contact() {
         </div>
       </div>
 
-      <div className="row">
+      <div className="bgimage2"></div>
+
+      <div className="row contactform">
+        <h2>Contact Us</h2>
+        <br></br>
         <div className="col-sm-4"></div>
         <div className="col-sm-4">
           <form onSubmit={handleSubmit(submitData)}>

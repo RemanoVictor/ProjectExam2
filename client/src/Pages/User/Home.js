@@ -65,59 +65,66 @@ export default function Holidaze() {
         </div>
       </div>
 
-      <div className="row">
-        <div className="col-sm-12" style={{ margin: 2 + "%" }}>
-          <p>Showing results for {searchPhrase}</p>
-        </div>
-
-        {isResultsFiltered ? (
-          <div>
-            {filteredResults.length > 0 ? (
-              filteredResults.map((value, index) => {
-                return (
-                  <Cards
-                    key={index}
-                    id={value.id}
-                    name={value.establishmentName}
-                    email={value.establishmentEmail}
-                    img={value.imageUrl}
-                    price={value.price}
-                    max={value.maxGuests}
-                    selfcatering={value.selfCatering}
-                  />
-                );
-              })
-            ) : (
-              <div>No Results</div>
-            )}
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-sm-12" style={{ margin: 2 + "%" }}>
+            <p>Showing results for {searchPhrase}</p>
           </div>
-        ) : (
-          <>
-            {estData !== undefined ? (
-              estData.map((value, index) => {
-                return (
-                  <Cards
-                    key={index}
-                    id={value.id}
-                    name={value.establishmentName}
-                    email={value.establishmentEmail}
-                    img={value.imageUrl}
-                    price={value.price}
-                    max={value.maxGuests}
-                    selfcatering={value.selfCatering}
-                  />
-                );
-              })
-            ) : (
-              <div>
-                <img
-                  src="https://bloxy.info/assets/progress_horizontal-e1c9f4c66e06ad7aa169dc42e420abe6f097111e9d98cf35dfc162bb41ffffe1.gif"
-                  alt="loading"
-                />
-              </div>
-            )}
-          </>
-        )}
+
+          {isResultsFiltered ? (
+            <div>
+              {filteredResults.length > 0 ? (
+                filteredResults.map((value, index) => {
+                  return (
+                    <Cards
+                      key={index}
+                      id={value.id}
+                      name={value.establishmentName}
+                      email={value.establishmentEmail}
+                      img={value.imageUrl}
+                      price={value.price}
+                      max={value.maxGuests}
+                      selfcatering={value.selfCatering}
+                    />
+                  );
+                })
+              ) : (
+                <div>No Results</div>
+              )}
+            </div>
+          ) : (
+            <>
+              {estData !== undefined ? (
+                estData.map((value, index) => {
+                  return (
+                    <Cards
+                      key={index}
+                      id={value.id}
+                      name={value.establishmentName}
+                      email={value.establishmentEmail}
+                      img={value.imageUrl}
+                      price={value.price}
+                      max={value.maxGuests}
+                      selfcatering={value.selfCatering}
+                    />
+                  );
+                })
+              ) : (
+                <div className="row">
+                  <div className="col-sm-4"></div>
+                  <div className="col-sm-4">
+                    <img
+                      src="https://ec.europa.eu/eurostat/cache/infographs/airports/pictures/plane-loading.gif"
+                      alt="loading"
+                      width="50%"
+                    />
+                  </div>
+                  <div className="col-sm-4"></div>
+                </div>
+              )}
+            </>
+          )}
+        </div>
       </div>
     </div>
   );

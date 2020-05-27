@@ -9,9 +9,13 @@ export default function Cards(props) {
         <h3>Name: {name} </h3>
         <p> email: {email}</p>
         <img src={img} alt="just random" className="[ CardImg ]" />
-        <p>price: {price}kr </p>
+        <br></br>
+        <p>price: {price}kr per night </p>
+        <br></br>
         <p>max guests: {max}</p>
+        <br></br>
         <p>self-catering: {selfcatering}</p>
+        <br></br>
         <Link to={`/Venuespecific/${id}`} className="btn btn-primary">
           Read More
         </Link>
