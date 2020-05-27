@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+import Logo from "../../logo3.svg";
+
 export default function Login(props) {
   const [inputs, setInputs] = useState({
     username: "",
@@ -30,19 +32,20 @@ export default function Login(props) {
           </div>
         </div>
       </div>
-
-      <div className="container">
-        <div className="row loginTitle">
+      <div className="bgimage"></div>
+      <div className="container-fluid loginContainer">
+        <div className="row">
           <div className="[ col-sm-1 ]"></div>
           <div className="col-sm-10">
-            <h1> Holidaze </h1>
+            <img src={Logo} alt="company logo" />
           </div>
           <div className="[ col-sm-1 ]"></div>
         </div>
+
         <div className="row">
           <div className="[ col-sm-4 ]"></div>
-          <div className="[ col-sm-4 ] [ login ]">
-            <h1> Login </h1>
+          <div className="[ col-sm-4 ]">
+            <h2> Login </h2>
             <form onSubmit={handleSubmit}>
               <p> Enter Username </p>
               <input

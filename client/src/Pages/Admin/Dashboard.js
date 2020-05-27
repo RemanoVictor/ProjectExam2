@@ -2,14 +2,16 @@ import React, { useState, useEffect } from "react";
 
 import axios from "axios";
 
-import { ENQUIRIES } from "../../Constants/constant";
+import { ENQUIRIES, CONTACTS } from "../../Constants/constant";
 import Enquiries from "../../Components/enquiries";
+import Messages from "../../Components/messages";
 import Nav from "../../Components/nav";
 import Login from "./Login";
 
 export default function Dashboard() {
   const [isloggedin, setisloggedin] = useState(false);
   const [enqData, setenqData] = useState(undefined);
+  const [contactData, setcontactData] = useState(undefined);
 
   const updateLogin = () => {
     setisloggedin(true);
@@ -22,7 +24,13 @@ export default function Dashboard() {
 
   useEffect(() => {
     axios.get(ENQUIRIES).then((enqJSON) => {
-      setenqData(enqJSON.data);
+      setenqData(enqJSON.data[0]);
+    });
+  }, []);
+
+  useEffect(() => {
+    axios.get(CONTACTS).then((contactJSON) => {
+      setcontactData(contactJSON.data[(0, 1)]);
     });
   }, []);
 
@@ -37,33 +45,28 @@ export default function Dashboard() {
           </div>
           <div className="[ col-sm-2 ]">
             <button onClick={logOut} className="btn btn-default">
-              LogOut
+              <span className="glyphicon glyphicon-log-in"></span> LogOut
             </button>
           </div>
         </div>
       </div>
       <div className="[ container-fluid ]">
-        {enqData !== undefined ? (
-          enqData.map((value, index) => {
-            return (
-              <Enquiries
-                key={index}
-                establishment={value.establishment}
-                clientName={value.clientName}
-                email={value.email}
-                checkin={value.checkin}
-                checkout={value.checkout}
-              />
-            );
-          })
-        ) : (
-          <div>
-            <img
-              src="https://bloxy.info/assets/progress_horizontal-e1c9f4c66e06ad7aa169dc42e420abe6f097111e9d98cf35dfc162bb41ffffe1.gif"
-              alt="loading"
-            />
-          </div>
-        )}
+        <div className="row">
+          <Enquiries
+            establishment={enqData.establishment}
+            clientName={enqData.clientName}
+            email={enqData.email}
+            checkin={enqData.checkin}
+            checkout={enqData.checkout}
+          />
+        </div>
+        <div className="row">
+          <Messages
+            clientName={contactData.clientName}
+            email={contactData.email}
+            message={contactData.message}
+          />
+        </div>
       </div>
     </div>
   ) : (

@@ -24,3 +24,6 @@ export const NEWCONTACT = "http://192.168.64.2/holidaze/contact-success.php";
 
 //new enquiry
 export const NEWENQUIRY = "http://192.168.64.2/holidaze/enquiry-success.php";
+
+//Logo
+export const Logo = "../Holidaze_logo.svg";

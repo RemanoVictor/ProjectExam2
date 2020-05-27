@@ -33,21 +33,29 @@ export default function Venue_Specific(props) {
       <div className="container-fluid">
         {estData !== undefined ? (
           <>
-            <div>
-              <img src={`${estData.imageUrl}`} />
-            </div>
-            <VenueSpecific
-              name={estData.establishmentName}
-              email={estData.establishmentEmail}
-              selfcatering={estData.selfCatering}
-              price={estData.price}
-              max={estData.maxGuests}
-            />
-            <div>
-              <LocationMap
-                latitude={estData.googleLat}
-                longitude={estData.googleLong}
-              />
+            <div className="container-fluid">
+              <div className="row">
+                <img src={estData.imageUrl} alt="a preview of the venue" />
+              </div>
+              <div className="row">
+                <div className="col-sm-6">
+                  <VenueSpecific
+                    name={estData.establishmentName}
+                    max={estData.maxGuests}
+                    selfcatering={estData.selfCatering}
+                    email={estData.establishmentEmail}
+                    price={estData.price}
+                    description={estData.description}
+                  />
+                </div>
+                <div className="col-sm-6 map">
+                  <LocationMap
+                    latitude={estData.googleLat}
+                    longitude={estData.googleLong}
+                    price={estData.price}
+                  />
+                </div>
+              </div>
             </div>
           </>
         ) : (

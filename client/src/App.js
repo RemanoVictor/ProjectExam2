@@ -6,7 +6,7 @@ import "./scss/styles.scss";
 export default function App(props) {
   return (
     <div className="App">
-      <div className="[ container-fluid ]">{props.children}</div>
+      <div>{props.children}</div>
     </div>
   );
 }

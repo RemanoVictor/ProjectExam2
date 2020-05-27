@@ -24,72 +24,82 @@ export default function VenueEnquiry() {
   };
 
   return (
-    <>
-      <div className="[ container-fluid ]">
-        <div className="[ row ] [ navigation ]">
-          <div className="[ col-sm-12 ]">
-            <Nav />
-          </div>
+    <div className=" container-fluid ">
+      <div className=" row navigation ">
+        <div className=" col-sm-12 ">
+          <Nav />
         </div>
       </div>
 
-      <form onSubmit={handleSubmit(submitEnq)}>
-        <label htmlFor="establishment">Establishment</label>
-        <input
-          type="text"
-          placeholder="establishment"
-          name="establishment"
-          id="establishment"
-          ref={register({ required: true, maxLength: 40 })}
-        />
-        {errors.establishment && <p>establishment name is required</p>}
+      <div className="row">
+        <div className="col-sm-4"></div>
+        <div className="col-sm-4">
+          <form onSubmit={handleSubmit(submitEnq)}>
+            <label htmlFor="establishment">Establishment</label>
+            <input
+              type="text"
+              placeholder="establishment"
+              name="establishment"
+              className="form-control"
+              id="establishment"
+              ref={register({ required: true, maxLength: 40 })}
+            />
+            {errors.establishment && <p>establishment name is required</p>}
 
-        <label htmlFor="clientName"> Name </label>
-        <input
-          type="text"
-          placeholder="clientName"
-          name="clientName"
-          id="clientName"
-          ref={register({ required: true })}
-        />
-        {errors.clientName && <p>Name is required</p>}
+            <label htmlFor="clientName"> Name </label>
+            <input
+              type="text"
+              placeholder="clientName"
+              name="clientName"
+              className="form-control"
+              id="clientName"
+              ref={register({ required: true })}
+            />
+            {errors.clientName && <p>Name is required</p>}
 
-        <label htmlFor="email">Email</label>
-        <input
-          type="text"
-          placeholder="email"
-          name="email"
-          id="email"
-          ref={register({ required: true, pattern: /^\S+@\S+$/i })}
-        />
-        {errors.emaile && <p>Email is required</p>}
+            <label htmlFor="email">Email</label>
+            <input
+              type="text"
+              placeholder="email"
+              name="email"
+              className="form-control"
+              id="email"
+              ref={register({ required: true, pattern: /^\S+@\S+$/i })}
+            />
+            {errors.emaile && <p>Email is required</p>}
 
-        <label htmlFor="checkin">Check-in</label>
-        <input
-          type="date"
-          name="checkin"
-          id="checkin"
-          ref={register({ required: true })}
-        />
+            <label htmlFor="checkin">Check-in</label>
+            <input
+              type="date"
+              name="checkin"
+              className="form-control"
+              id="checkin"
+              ref={register({ required: true })}
+            />
 
-        <label htmlFor="checkout">Check-out</label>
-        <input
-          type="date"
-          name="checkout"
-          id="checkout"
-          ref={register({ required: true })}
-        />
+            <label htmlFor="checkout">Check-out</label>
+            <input
+              type="date"
+              name="checkout"
+              className="form-control"
+              id="checkout"
+              ref={register({ required: true })}
+            />
 
-        <label htmlFor="adults"> Adults </label>
-        <input
-          type="number"
-          name="adults"
-          id="adults"
-          ref={register({ required: true })}
-        />
+            <label htmlFor="adults"> Adults </label>
+            <input
+              type="number"
+              name="adults"
+              className="form-control"
+              id="adults"
+              ref={register({ required: true })}
+            />
 
-        <input type="submit" />
-      </form>
-    </>
+            <input type="submit" />
+          </form>
+        </div>
+        <div className="col-sm-4"></div>
+      </div>
+    </div>
   );
 }

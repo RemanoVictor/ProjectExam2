@@ -1,21 +1,18 @@
 import React from "react";
 import { Map, Marker, GoogleApiWrapper } from "google-maps-react";
 
-function LocationMap({ google, latitude, longitude }) {
-  return (
-    <div>
-      <Map
-        google={google}
-        zoom={14}
-        initialCenter={{
-          lat: latitude,
-          lng: longitude,
-        }}
-        //style={containerStyle}
-      >
-        <Marker name={"Current location"} />
-      </Map>
-    </div>
+function LocationMap({google, latitude, longitude }) {  
+  return (       
+        <Map
+          google={google}
+          zoom={14}
+          initialCenter={{
+            lat: latitude,
+            lng: longitude,
+          }}        
+        >
+          <Marker name={"Current location"} />
+        </Map>          
   );
 }
 
