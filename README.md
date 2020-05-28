@@ -1,68 +1,62 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# HOLIDAZE - HOTEL BOOKING SITE
 
-## Available Scripts
+This readme file will give you the tools you need to complete the project and explains what the different files are and how to use them.
 
-In the project directory, you can run:
+A very basic scaffolding using PHP has been created for you to use.
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+In order to get the PHP code to work you need to run it on a server. You could use your web host, but that would be quite cumbersome to work on. To make it easier to code, download XAMPP https://www.apachefriends.org/index.html (or another development environment) and install it. This allows you to run a server on your computer.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Once installed, open the panel and click 'Start' on Apache to start your local server. Now find where XAMPP has been installed on your computer (on Windows it's likely to be C:\xampp\) and once in this folder open 'htdocs'. Take the unzipped folder 'hotel-booking', which this README is inside of, and copy-paste the whole folder into the htdocs folder.
 
-### `npm test`
+Now open your browser and go to http://localhost/hotel-booking/contact.html. There you should see a simple contact form. This means the files are correctly running on your local server.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+If you run into any problems, please let your tutor know.
 
-### `npm run build`
+#### Repository
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The provided HTML files are a way to test sending data to the server endpoints, but you can't send data to the server in a React or Vue project that way. Examples of posting data in the frontend frameworks will be provided.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- the contact form should send data to http://localhost/hotel-api/contact-success.php
+- the enquiry form should send data to http://localhost/hotel-api/enquiry-success.php
+- the add establishment form should send data to http://localhost/hotel-api/add-establishments-success.php
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Store your JSON files inside your frontend project's public folder, and ensure that your PHP files are reading and writing to these files. The section you need to update with the correct filepath is file_get_contents('establishments.json') and file_put_contents('establishments.json', \$jsonData); as these are what are writing and reading your JSON files.
 
-### `npm run eject`
+You can fetch the contents of the json files by using the following URLs:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- http://localhost/hotel-api/get-establishments.php
+- http://localhost/hotel-api/get-establishment.php
+- http://localhost/hotel-api/get-enquiries.php
+- http://localhost/hotel-api/get-contacts.php
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## The Code
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### HTML
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+The names of the inputs in the provided HTML forms are the ones that must be used. The PHP codes is expecting those names.
 
-## Learn More
+#### PHP
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The PHP code used is fairly simple and has been tested and works correctly. In most projects you'd use a database to store and retrieve data, but to make things easier for you we have created PHP to generate JSON files for you to access. This means that when a user on the front-end sends a contact message, this gets handled by PHP and the data added to a JSON file with an array of contact messages.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### JSON
 
-### Code Splitting
+The reason we have chosen to create JSON files for you, is that you are likely to find this the most simple way of handling the data on the front-end. One thing to note is that the way the PHP has been written it requires a minimum of one entry in the JSON files, so please don't delete all records in the JSON file.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Pages
 
-### Analyzing the Bundle Size
+For this project it's important to understand the two views of the website. The first is from the customer-facing side where they can view establishments, make enquiries and send contact messages. These enquiries and messages all get handled from an admin area. This admin area allows an administrator to view the enquiries and messages, and create a new establishment to view on the customer-facing side.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+#### Contact
 
-### Making a Progressive Web App
+The contact page is for visitors to the site to message the admin team at Holidaze. The page has three inputs for full name, email address and message. The customer submits the form, which gets processed on a separate page, and the data gets added to a JSON file.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+#### Enquiry
 
-### Advanced Configuration
+The enquiry page is the same as above, except with more inputs. One important thing to note on this page is that the name of the establishment has been hard-coded to the page into the value of the input. You need to change the value of the input based on which establishment the user is on. This data then gets sent via the form to the admin area where they can see the name of the establishment being enquired for.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+#### Add Establishments
 
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This page is on the admin area and allows the administrators to create a new establishment. When the form is submitted, the data is added to the establishments.json file.
