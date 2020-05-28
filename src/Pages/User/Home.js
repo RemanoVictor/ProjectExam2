@@ -14,6 +14,7 @@ export default function Holidaze() {
 
   useEffect(() => {
     axios.get(ESTABLISHMENTS).then((estJSON) => {
+      console.log(estJSON.data);
       setestData(estJSON.data);
     });
   }, []);
@@ -29,27 +30,27 @@ export default function Holidaze() {
     setsearchPhrase(input.target.value);
   }
   return (
-    <div className="[ container-fluid ]">
-      <div>
+    <div>
+      <div className="container-fluid landingPage">
+        <div className="col-sm-4 overlay"></div>
         <div className="[ row ] [ navigation ]">
           <div className="[ col-sm-12 ]">
             <Nav />
           </div>
         </div>
-      </div>
-      <div className="[ container-fluid ][ landingPage ]">
-        <div className="[ row ]">
-          <div className="[ col-sm-12 ]">
-            <h1 className="[ welcomeHeading ]">Holidaze </h1>
-          </div>
-        </div>
-      </div>
 
-      <div className="[ container ]">
         <div className="[ row ]">
-          <div className="[ col-sm-12 ]">
+          <div className="col-sm-4"></div>
+          <div className="col-sm-4">
+            <h2 className="[ welcomeHeading ]"> Search accomodation</h2>
+          </div>
+          <div className="col-sm-4"></div>
+        </div>
+
+        <div className="[ row ]">
+          <div className="col-sm-4"></div>
+          <div className="col-sm-4">
             <form>
-              <p>Showing results for {searchPhrase}</p>
               <input
                 type="text"
                 name="username"
@@ -60,9 +61,16 @@ export default function Holidaze() {
               <br />
             </form>
           </div>
+          <div className="col-sm-4"></div>
         </div>
+      </div>
 
+      <div className="container-fluid">
         <div className="row">
+          <div className="col-sm-12" style={{ margin: 2 + "%" }}>
+            <p>Showing results for {searchPhrase}</p>
+          </div>
+
           {isResultsFiltered ? (
             <div>
               {filteredResults.length > 0 ? (
@@ -102,11 +110,16 @@ export default function Holidaze() {
                   );
                 })
               ) : (
-                <div>
-                  <img
-                    src="https://bloxy.info/assets/progress_horizontal-e1c9f4c66e06ad7aa169dc42e420abe6f097111e9d98cf35dfc162bb41ffffe1.gif"
-                    alt="loading"
-                  />
+                <div className="row">
+                  <div className="col-sm-4"></div>
+                  <div className="col-sm-4">
+                    <img
+                      src="https://ec.europa.eu/eurostat/cache/infographs/airports/pictures/plane-loading.gif"
+                      alt="loading"
+                      width="50%"
+                    />
+                  </div>
+                  <div className="col-sm-4"></div>
                 </div>
               )}
             </>

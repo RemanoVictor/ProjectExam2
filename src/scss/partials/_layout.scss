@@ -6,10 +6,13 @@
 
 body {
     font-family: helvetica, sans-serif;
+    overflow-x: hidden;
+    font-size: 2em;
+    color: white;
+    background-color: #017BB1;
 
     img {
         width: 100%;
-        height: 20%;
     }
 
     h1 {
@@ -20,76 +23,65 @@ body {
     }
 
     input {
+        margin-bottom: 5%;
         color: black;
     }
 
+    .btn {
+        border: 2px solid white;
+
+        &:hover {
+            color: yellow;
+        }
+    }
+
     .navigation {
-        background-color: #230031;
-        border-bottom: 5px solid rgb(62, 152, 226);
+        background-color: rgba($color: #000000, $alpha: 0.5);
 
         .navbar-inverse {
             background-color: inherit;
             border: none;
         }
 
+        .navbar-header {
+            img {
+                width: 60%;
+            }
+        }
+
         button {
             background-color: transparent;
-            border: 1px solid white;
-            color: #8eaee6;
-            width: 50%;
+            border: none;
+            color: #ffffff;
             padding: 5px;
-            border-radius: 5px;
             font-size: 1.5em;
             margin-top: 5%;
         }
 
         .navbar-nav {
+            margin-top: 1%;
+
             li {
+                list-style-type: none;
+
                 a {
-                    margin-top: 5px;
-                    color: #8eaee6;
-                    font-size: 1.5em;
+                    color: #ffffff;
 
-
+                    &:hover {
+                        color: yellow;
+                    }
                 }
             }
         }
     }
 
-    .navbar-nav>li>a:hover {
-        color: red;
-    }
-}
-
-.card {
-    box-shadow: 0px 5px 50px 0.5px #ffffff;
-    margin: 15px;
-    width: 30%;
-    padding: 10px;
-    height: auto;
-
-    img {
-        height: 20%;
+    .card {
+        width: 50%;
         margin: 5% 0;
     }
 
-
-}
-
-.error {
-    color: red;
-
-    &_border {
-        border: solid 1px red;
-    }
-
-    &_hide {
-        display: none;
-    }
-}
-
-.accordion {
-    .card {
-        width: 100%;
+    .footer {
+        height: 20vh;
+        padding: 5%;
     }
 }
