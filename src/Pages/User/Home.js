@@ -5,11 +5,12 @@ import Nav from "../../Components/nav2";
 
 import { ESTABLISHMENTS } from "../../Constants/constant";
 import Cards from "../../Components/cards";
+import DropDownResults from "../../Components/dropdownresult";
 
 export default function Holidaze() {
   const [estData, setestData] = useState(undefined);
   const [filteredResults, setFilteredResults] = useState(undefined);
-  const [searchPhrase, setsearchPhrase] = useState("");
+  // const [searchPhrase, setsearchPhrase] = useState("");
   const [isResultsFiltered, setisResultsFiltered] = useState(false);
 
   useEffect(() => {
@@ -27,7 +28,7 @@ export default function Holidaze() {
     });
     setFilteredResults(filteredest);
     setisResultsFiltered(true);
-    setsearchPhrase(input.target.value);
+    // setsearchPhrase(input.target.value);
   }
   return (
     <div>
@@ -57,6 +58,25 @@ export default function Holidaze() {
                 onChange={handleFiltering}
                 className="form-control"
               />
+              {isResultsFiltered ? (
+                <div className=" searchresults ">
+                  {filteredResults.length > 0 ? (
+                    filteredResults.map((value, index) => {
+                      return (
+                        <DropDownResults
+                          key={index}
+                          name={value.establishmentName}
+                          id={value.id}
+                        />
+                      );
+                    })
+                  ) : (
+                    <div>No Results</div>
+                  )}
+                </div>
+              ) : (
+                ""
+              )}
               <br />
               <br />
             </form>
@@ -67,62 +87,33 @@ export default function Holidaze() {
 
       <div className="container-fluid">
         <div className="row">
-          <div className="col-sm-12" style={{ margin: 2 + "%" }}>
-            <p>Showing results for {searchPhrase}</p>
-          </div>
-
-          {isResultsFiltered ? (
-            <div>
-              {filteredResults.length > 0 ? (
-                filteredResults.map((value, index) => {
-                  return (
-                    <Cards
-                      key={index}
-                      id={value.id}
-                      name={value.establishmentName}
-                      email={value.establishmentEmail}
-                      img={value.imageUrl}
-                      price={value.price}
-                      max={value.maxGuests}
-                      selfcatering={value.selfCatering}
-                    />
-                  );
-                })
-              ) : (
-                <div>No Results</div>
-              )}
-            </div>
+          {estData !== undefined ? (
+            estData.map((value, index) => {
+              return (
+                <Cards
+                  key={index}
+                  id={value.id}
+                  name={value.establishmentName}
+                  email={value.establishmentEmail}
+                  img={value.imageUrl}
+                  price={value.price}
+                  max={value.maxGuests}
+                  selfcatering={value.selfCatering}
+                />
+              );
+            })
           ) : (
-            <>
-              {estData !== undefined ? (
-                estData.map((value, index) => {
-                  return (
-                    <Cards
-                      key={index}
-                      id={value.id}
-                      name={value.establishmentName}
-                      email={value.establishmentEmail}
-                      img={value.imageUrl}
-                      price={value.price}
-                      max={value.maxGuests}
-                      selfcatering={value.selfCatering}
-                    />
-                  );
-                })
-              ) : (
-                <div className="row">
-                  <div className="col-sm-4"></div>
-                  <div className="col-sm-4">
-                    <img
-                      src="https://ec.europa.eu/eurostat/cache/infographs/airports/pictures/plane-loading.gif"
-                      alt="loading"
-                      width="50%"
-                    />
-                  </div>
-                  <div className="col-sm-4"></div>
-                </div>
-              )}
-            </>
+            <div className="row">
+              <div className="col-sm-4"></div>
+              <div className="col-sm-4">
+                <img
+                  src="https://ec.europa.eu/eurostat/cache/infographs/airports/pictures/plane-loading.gif"
+                  alt="loading"
+                  width="50%"
+                />
+              </div>
+              <div className="col-sm-4"></div>
+            </div>
           )}
         </div>
       </div>
