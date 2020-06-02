@@ -15,37 +15,38 @@ export default function UserEnquiries() {
     });
   }, []);
   return (
-    <>
-      <div className="[ container-fluid ]">
-        <div className="[ row ] [ navigation ]">
-          <div className="[ col-sm-12 ]">
-            <Nav />
-          </div>
+    <div className="[ container-fluid ]">
+      <div className="[ row ] [ navigation ]">
+        <div className="[ col-sm-12 ]">
+          <Nav />
         </div>
       </div>
-      <div className="container">
-        {enqData !== undefined ? (
-          enqData.map((value, index) => {
-            return (
-              <Enquiries
-                key={index}
-                establishment={value.establishment}
-                clientName={value.clientName}
-                email={value.email}
-                checkin={value.checkin}
-                checkout={value.checkout}
+
+      <div className="container userEnquiries">
+        <div className="row">
+          {enqData !== undefined ? (
+            enqData.map((value, index) => {
+              return (
+                <Enquiries
+                  key={index}
+                  establishment={value.establishment}
+                  clientName={value.clientName}
+                  email={value.email}
+                  checkin={value.checkin}
+                  checkout={value.checkout}
+                />
+              );
+            })
+          ) : (
+            <div>
+              <img
+                src="https://bloxy.info/assets/progress_horizontal-e1c9f4c66e06ad7aa169dc42e420abe6f097111e9d98cf35dfc162bb41ffffe1.gif"
+                alt="loading"
               />
-            );
-          })
-        ) : (
-          <div>
-            <img
-              src="https://bloxy.info/assets/progress_horizontal-e1c9f4c66e06ad7aa169dc42e420abe6f097111e9d98cf35dfc162bb41ffffe1.gif"
-              alt="loading"
-            />
-          </div>
-        )}
+            </div>
+          )}
+        </div>
       </div>
-    </>
+    </div>
   );
 }

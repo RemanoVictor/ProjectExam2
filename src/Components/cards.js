@@ -5,7 +5,7 @@ export default function Cards(props) {
   const { name, email, img, price, max, selfcatering, id } = props;
   return (
     <>
-      <div className="col-sm-6 card">
+      <div className="col-sm-4 card">
         <h3>Name: {name} </h3>
         <p> email: {email}</p>
         <img src={img} alt="just random" className="[ CardImg ]" />

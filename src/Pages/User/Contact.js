@@ -48,13 +48,12 @@ export default function Contact() {
           <button onClick={handleCloseModal}>x</button>
         </Modal>
       </div>
-      <div className="bgimage2"></div>
 
-      <div className="row contactform">
-        <h2>Contact Us</h2>
-        <br></br>
-        <div className="col-sm-4"></div>
-        <div className="col-sm-4">
+      <div className="row contactContainer">
+        <div className="col-md-4 col-sm-2"></div>
+        <div className="col-md-4 col-sm-2 Form">
+          <h2>Contact Us</h2>
+          <br></br>
           <form onSubmit={handleSubmit(submitData)}>
             <label htmlFor="clientName">Please enter your name</label>
             <input
@@ -91,7 +90,7 @@ export default function Contact() {
             <input type="submit" className="btn btn-primary" />
           </form>
         </div>
-        <div className="col-sm-4"></div>
+        <div className="col-md-4 col-sm-2"></div>
       </div>
     </div>
   );

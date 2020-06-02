@@ -19,6 +19,9 @@ export default function Nav() {
           <li>
             <Link to="/Contact">Contact</Link>
           </li>
+          <li>
+            <Link to="/AllVenues">All Venues </Link>
+          </li>
         </ul>
         <ul className="nav navbar-nav navbar-right">
           <li>

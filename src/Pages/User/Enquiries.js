@@ -55,14 +55,12 @@ export default function VenueEnquiry() {
         </Modal>
       </div>
 
-      <div className="bgimage3"></div>
-
-      <div className="row enquiryForm">
-        <h2> Enquiry Form </h2>
-        <br></br>
+      <div className="row enquiryContainer">
         <div className="col-sm-4"></div>
-        <div className="col-sm-4">
+        <div className="col-sm-4 Form">
           <form onSubmit={handleSubmit(submitEnq)}>
+            <h2> Enquiry Form </h2>
+            <br></br>
             <label htmlFor="establishment">Establishment</label>
             <input
               type="text"

@@ -11,6 +11,7 @@ import VenueSpecific from "./Pages/User/Venuespecific";
 import VenueEnquiry from "./Pages/User/Enquiries";
 import UserEnquiries from "./Pages/Admin/UserEnquiries";
 import AddVenue from "./Pages/Admin/AddVenue";
+import AllVenues from "./Pages/User/AllVenues";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
@@ -25,6 +26,7 @@ ReactDOM.render(
         <Route path="/Enquiries" component={VenueEnquiry} />
         <Route path="/UserEnquiries" component={UserEnquiries} />
         <Route path="/AddVenue" component={AddVenue} />
+        <Route path="/AllVenues" component={AllVenues} />
       </Switch>
     </App>
   </Router>,

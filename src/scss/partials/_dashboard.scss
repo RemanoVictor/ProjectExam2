@@ -1,0 +1,31 @@
+.dashboardContainer {
+    background-image: url("https://images.unsplash.com/photo-1544205488-26c43bcff617?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1506&q=80");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 90vh;
+    text-align: center;
+    position: relative;
+}
+
+.welcome {
+    margin-top: 20%;
+    font-size: 2em;
+}
+
+div.clock.medium div.date {
+    color: white;
+    font-size: 3em;
+}
+
+div.clock {
+    color: white;
+}
+
+.messagesSection {
+    padding: 5%;
+}
+
+.enquiriesSection {
+    padding: 5%;
+}

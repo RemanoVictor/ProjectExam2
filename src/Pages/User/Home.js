@@ -4,13 +4,12 @@ import axios from "axios";
 import Nav from "../../Components/nav2";
 
 import { ESTABLISHMENTS } from "../../Constants/constant";
-import Cards from "../../Components/cards";
 import DropDownResults from "../../Components/dropdownresult";
 
 export default function Holidaze() {
   const [estData, setestData] = useState(undefined);
   const [filteredResults, setFilteredResults] = useState(undefined);
-  // const [searchPhrase, setsearchPhrase] = useState("");
+  const [searchPhrase, setsearchPhrase] = useState("");
   const [isResultsFiltered, setisResultsFiltered] = useState(false);
 
   useEffect(() => {
@@ -28,7 +27,7 @@ export default function Holidaze() {
     });
     setFilteredResults(filteredest);
     setisResultsFiltered(true);
-    // setsearchPhrase(input.target.value);
+    setsearchPhrase(input.target.value);
   }
   return (
     <div>
@@ -57,8 +56,9 @@ export default function Holidaze() {
                 name="username"
                 onChange={handleFiltering}
                 className="form-control"
+                autoComplete="off"
               />
-              {isResultsFiltered ? (
+              {isResultsFiltered && searchPhrase !== "" ? (
                 <div className=" searchresults ">
                   {filteredResults.length > 0 ? (
                     filteredResults.map((value, index) => {
@@ -82,39 +82,6 @@ export default function Holidaze() {
             </form>
           </div>
           <div className="col-sm-4"></div>
-        </div>
-      </div>
-
-      <div className="container-fluid">
-        <div className="row">
-          {estData !== undefined ? (
-            estData.map((value, index) => {
-              return (
-                <Cards
-                  key={index}
-                  id={value.id}
-                  name={value.establishmentName}
-                  email={value.establishmentEmail}
-                  img={value.imageUrl}
-                  price={value.price}
-                  max={value.maxGuests}
-                  selfcatering={value.selfCatering}
-                />
-              );
-            })
-          ) : (
-            <div className="row">
-              <div className="col-sm-4"></div>
-              <div className="col-sm-4">
-                <img
-                  src="https://ec.europa.eu/eurostat/cache/infographs/airports/pictures/plane-loading.gif"
-                  alt="loading"
-                  width="50%"
-                />
-              </div>
-              <div className="col-sm-4"></div>
-            </div>
-          )}
         </div>
       </div>
     </div>

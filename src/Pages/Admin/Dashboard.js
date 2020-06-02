@@ -30,15 +30,17 @@ export default function Dashboard() {
 
   useEffect(() => {
     axios.get(CONTACTS).then((contactJSON) => {
-      setcontactData(contactJSON.data[(0, 1)]);
+      setcontactData(contactJSON.data[0]);
     });
   }, []);
 
-  return localStorage.getItem("username") === "Noroff" &&
-    localStorage.getItem("password") === "finalCA" &&
+  return localStorage.getItem("username") === "Cameron" &&
+    localStorage.getItem("password") === "Admin" &&
     isloggedin === true ? (
     <div className="App">
-      <div className="[ container-fluid ]">
+      <div className=" container-fluid dashboardPage">
+        <div className=" col-sm-4 overlay2"></div>
+
         <div className="[ row ] [ navigation ]">
           <div className="[ col-sm-10 ]">
             <Nav />
@@ -49,23 +51,70 @@ export default function Dashboard() {
             </button>
           </div>
         </div>
-      </div>
-      <div className="[ container-fluid ]">
-        <div className="row">
-          <Enquiries
-            establishment={enqData.establishment}
-            clientName={enqData.clientName}
-            email={enqData.email}
-            checkin={enqData.checkin}
-            checkout={enqData.checkout}
-          />
+
+        <div className="container-fluid dashboardContainer">
+          <div className="overlay"></div>
+          <div className="row">
+            <div className="col-sm-4"></div>
+            <div className="col-sm-4 welcome">
+              <h2>Welcome, {localStorage.getItem("username")}</h2>
+            </div>
+            <div className="col-sm-4">
+              <iframe
+                title="world clock"
+                src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=en&size=medium&timezone=Europe%2FOslo"
+                width="100%"
+                height="115"
+                frameBorder="0"
+                seamless
+              ></iframe>
+            </div>
+          </div>
         </div>
-        <div className="row">
-          <Messages
-            clientName={contactData.clientName}
-            email={contactData.email}
-            message={contactData.message}
-          />
+
+        <div className="row enquiriesSection">
+          <div className="container-fluid">
+            <div className="row">
+              <div className="col-sm-4"></div>
+              <div className="col-sm-4">
+                <h3 className="enquiriesHeading"> Enquiries </h3>
+              </div>
+              <div className="col-sm-4"></div>
+            </div>
+
+            <div className="row">
+              <div className="col-sm-6">
+                <Enquiries
+                  establishment={enqData.establishment}
+                  clientName={enqData.clientName}
+                  email={enqData.email}
+                  checkin={enqData.checkin}
+                  checkout={enqData.checkout}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="row messagesSection">
+          <div className="container-fluid">
+            <div className="row">
+              <div className="col-sm-4"></div>
+              <div className="col-sm-4">
+                <h3 className="enquiriesHeading"> Messages </h3>
+              </div>
+              <div className="col-sm-4"></div>
+            </div>
+            <div className="row">
+              <div className="col-sm-6">
+                <Messages
+                  clientName={contactData.clientName}
+                  email={contactData.email}
+                  message={contactData.message}
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

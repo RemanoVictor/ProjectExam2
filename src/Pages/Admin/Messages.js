@@ -23,26 +23,35 @@ export default function ContactMessages() {
           </div>
         </div>
       </div>
-      <div className="container">
-        {messageData !== undefined ? (
-          messageData.map((value, index) => {
-            return (
-              <Messages
-                key={index}
-                clientName={value.clientName}
-                email={value.email}
-                message={value.message}
-              />
-            );
-          })
-        ) : (
-          <div>
-            <img
-              src="https://bloxy.info/assets/progress_horizontal-e1c9f4c66e06ad7aa169dc42e420abe6f097111e9d98cf35dfc162bb41ffffe1.gif"
-              alt="loading"
-            />
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-sm-4"></div>
+          <div className="col-sm-4">
+            <h2> Messages </h2>
           </div>
-        )}
+          <div className="col-sm-4"></div>
+        </div>
+        <div className="row">
+          {messageData !== undefined ? (
+            messageData.map((value, index) => {
+              return (
+                <Messages
+                  key={index}
+                  clientName={value.clientName}
+                  email={value.email}
+                  message={value.message}
+                />
+              );
+            })
+          ) : (
+            <div>
+              <img
+                src="https://bloxy.info/assets/progress_horizontal-e1c9f4c66e06ad7aa169dc42e420abe6f097111e9d98cf35dfc162bb41ffffe1.gif"
+                alt="loading"
+              />
+            </div>
+          )}
+        </div>
       </div>
     </>
   );

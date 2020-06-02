@@ -29,6 +29,9 @@ export default function ContactMessages() {
             return (
               <Messages
                 key={index}
+                img={
+                  "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQs_tXpPKVwoWQynT736mi5UMQf8cTJeqbrBTjnIc35fU103_bQ&usqp=CAU"
+                }
                 clientName={value.clientName}
                 email={value.email}
                 message={value.message}

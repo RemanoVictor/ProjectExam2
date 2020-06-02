@@ -32,7 +32,7 @@ export default function Login(props) {
           </div>
         </div>
       </div>
-      <div className="bgimage1"></div>
+      <div className=" row bgimage1"></div>
       <div className="container-fluid loginContainer">
         <div className="row">
           <div className="[ col-sm-1 ]"></div>
@@ -53,7 +53,8 @@ export default function Login(props) {
                 name="username"
                 onChange={handleChange}
                 className="form-control"
-                placeholder="Noroff"
+                placeholder="Cameron"
+                autoComplete="off"
               />
               <p> Password </p>
               <input
@@ -61,7 +62,8 @@ export default function Login(props) {
                 name="password"
                 onChange={handleChange}
                 className="form-control"
-                placeholder="finalCA"
+                placeholder="Admin"
+                autoComplete="off"
               />
               <input type="submit" className="btn" />
             </form>
