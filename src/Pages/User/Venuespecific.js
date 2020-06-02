@@ -55,8 +55,9 @@ export default function Venue_Specific() {
       ) : (
         <div>
           <img
-            src="https://static-steelkiwi-dev.s3.amazonaws.com/media/filer_public/58/33/58336e64-632d-47dd-8d46-ab6cc28dd05b/5b370ecf-6835-4d78-92a1-b9defa012cd7.gif"
+            src="https://ec.europa.eu/eurostat/cache/infographs/airports/pictures/plane-loading.gif"
             alt="loading"
+            width="50%"
           />
         </div>
       )}
