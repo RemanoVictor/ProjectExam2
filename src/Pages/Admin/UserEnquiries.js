@@ -15,15 +15,27 @@ export default function UserEnquiries() {
     });
   }, []);
   return (
-    <div className="[ container-fluid ]">
+    <>
       <div className="[ row ] [ navigation ]">
         <div className="[ col-sm-12 ]">
           <Nav />
         </div>
       </div>
 
-      <div className="container-fluid userEnquiries">
-        <div className="row">
+      <div className="container-fluid enquirybanner">
+        <div className="row enquirybanner--container">
+          <img
+            src="https://images.pexels.com/photos/2874752/pexels-photo-2874752.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+            alt="forest leaves in Bergen"
+            className="enquirybanner--container__image"
+          />
+          <h2 className="enquirybanner--container__text">Enquiries</h2>
+          <div className="enquirybanner--container__overlay"></div>
+        </div>
+      </div>
+
+      <div className="container-fluid">
+        <div className="row userenquiries">
           {enqData !== undefined ? (
             enqData.map((value, index) => {
               return (
@@ -48,6 +60,6 @@ export default function UserEnquiries() {
           )}
         </div>
       </div>
-    </div>
+    </>
   );
 }

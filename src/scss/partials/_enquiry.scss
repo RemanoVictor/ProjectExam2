@@ -4,3 +4,46 @@
     background-size: cover;
     padding: 5%;
 }
+
+.enquirybanner {
+    &--container {
+        position: relative;
+
+        &__overlay {
+            background: rgba(000, 000, 000, 0.5);
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: 0;
+            padding: 0;
+            margin: 0;
+        }
+
+        &__text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            font-size: 2.5em;
+        }
+
+        &__image {
+            height: 50vh;
+
+        }
+    }
+}
+
+.userenquiries {
+    &--container {
+        padding: 5%;
+
+        &__image {
+            width: 100%;
+        }
+    }
+}

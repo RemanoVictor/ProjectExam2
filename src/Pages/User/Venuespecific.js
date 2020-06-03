@@ -52,13 +52,11 @@ export default function Venue_Specific() {
           </div>
         </div>
       ) : (
-        <div>
-          <img
-            src="https://ec.europa.eu/eurostat/cache/infographs/airports/pictures/plane-loading.gif"
-            alt="loading"
-            width="50%"
-          />
-        </div>
+        <img
+          src="https://ec.europa.eu/eurostat/cache/infographs/airports/pictures/plane-loading.gif"
+          alt="loading"
+          width="50%"
+        />
       )}
     </>
   );

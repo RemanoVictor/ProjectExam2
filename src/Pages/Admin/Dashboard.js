@@ -1,17 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
-import axios from "axios";
-
-import { ENQUIRIES, CONTACTS } from "../../Constants/constant";
-import Enquiries from "../../Components/enquiries";
-import Messages from "../../Components/messages";
 import Nav from "../../Components/nav";
 import Login from "./Login";
 
 export default function Dashboard() {
   const [isloggedin, setisloggedin] = useState(false);
-  const [enqData, setenqData] = useState(undefined);
-  const [contactData, setcontactData] = useState(undefined);
 
   const updateLogin = () => {
     setisloggedin(true);
@@ -21,18 +14,6 @@ export default function Dashboard() {
     setisloggedin(false);
     localStorage.clear();
   };
-
-  useEffect(() => {
-    axios.get(ENQUIRIES).then((enqJSON) => {
-      setenqData(enqJSON.data[0]);
-    });
-  }, []);
-
-  useEffect(() => {
-    axios.get(CONTACTS).then((contactJSON) => {
-      setcontactData(contactJSON.data[0]);
-    });
-  }, []);
 
   return localStorage.getItem("username") === "Cameron" &&
     localStorage.getItem("password") === "Admin" &&
@@ -67,47 +48,6 @@ export default function Dashboard() {
                 frameBorder="0"
                 seamless
               ></iframe>
-            </div>
-          </div>
-        </div>
-
-        <div className="row enquiriesSection">
-          <div className="container-fluid">
-            <div className="row">
-              <div className="col-md-4 col-md-offset-4">
-                <h3 className="enquiriesHeading"> Enquiries </h3>
-              </div>
-            </div>
-
-            <div className="row">
-              <div className="col-md-6">
-                <Enquiries
-                  establishment={enqData.establishment}
-                  clientName={enqData.clientName}
-                  email={enqData.email}
-                  checkin={enqData.checkin}
-                  checkout={enqData.checkout}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="row messagesSection">
-          <div className="container-fluid">
-            <div className="row">
-              <div className="col-md-4 col-md-offset-4">
-                <h3 className="enquiriesHeading"> Messages </h3>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-sm-6">
-                <Messages
-                  clientName={contactData.clientName}
-                  email={contactData.email}
-                  message={contactData.message}
-                />
-              </div>
             </div>
           </div>
         </div>

@@ -61,7 +61,7 @@ export default function AddVenue() {
       </div>
 
       <div className="row Form addvenuecontanier">
-        <div className=" col-md-4 col-md-offset-4 Form">
+        <div className=" col-md-6 col-md-offset-3 Form">
           <h2> Add Venue </h2>
           <br></br>
           <form onSubmit={handleSubmit(submitData)}>
@@ -147,22 +147,31 @@ export default function AddVenue() {
 
             <label htmlFor="selfCatering">Self-catering</label>
             <br></br>
-            <label htmlFor="true">True</label>
-            <input
-              type="radio"
-              id="true"
-              name="selfCatering"
-              value="true"
-              ref={register({ required: true })}
-            />
-            <label htmlFor="false">False</label>
-            <input
-              type="radio"
-              id="false"
-              name="selfCatering"
-              value="false"
-              ref={register({ required: true })}
-            />
+            <div className="row">
+              <div className="col-md-6">
+                <label htmlFor="true">True</label>
+                <input
+                  type="radio"
+                  id="true"
+                  name="selfCatering"
+                  value="true"
+                  className="radioInput"
+                  ref={register({ required: true })}
+                />
+              </div>
+              <div className="col-md-6">
+                <label htmlFor="false" className="radioInput">
+                  False
+                </label>
+                <input
+                  type="radio"
+                  id="false"
+                  name="selfCatering"
+                  value="false"
+                  ref={register({ required: true })}
+                />
+              </div>
+            </div>
             <br></br>
 
             <label htmlFor="id">ID</label>

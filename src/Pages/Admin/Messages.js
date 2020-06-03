@@ -23,12 +23,20 @@ export default function ContactMessages() {
           </div>
         </div>
       </div>
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col-md-4 col-md-offset-4 messageTitle">
-            <h2> Messages </h2>
-          </div>
+
+      <div className="container-fluid messagebanner">
+        <div className="messagebanner--container">
+          <h3 className="messagebanner--container__text">Messages</h3>
+          <img
+            src="https://images.pexels.com/photos/1933239/pexels-photo-1933239.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+            alt=" Bergen,Norway"
+            className="messagebanner--container__image"
+          />
+
+          <div className="messagebanner--container__overlay"></div>
         </div>
+      </div>
+      <div className="container-fluid">
         <div className="row">
           {messageData !== undefined ? (
             messageData.map((value, index) => {
