@@ -32,7 +32,7 @@ export default function Holidaze() {
   return (
     <div>
       <div className="container-fluid landingPage">
-        <div className="col-sm-4 overlay"></div>
+        <div className="col-md-4 overlay"></div>
         <div className="[ row ] [ navigation ]">
           <div className="[ col-sm-12 ]">
             <Nav />
@@ -40,16 +40,16 @@ export default function Holidaze() {
         </div>
 
         <div className="[ row ]">
-          <div className="col-sm-4"></div>
-          <div className="col-sm-4">
+          <div className="col-md-4"></div>
+          <div className="col-md-4">
             <h2 className="[ welcomeHeading ]"> Search accomodation</h2>
           </div>
-          <div className="col-sm-4"></div>
+          <div className="col-md-4"></div>
         </div>
 
         <div className="[ row ]">
-          <div className="col-sm-4"></div>
-          <div className="col-sm-4">
+          <div className="col-md-4"></div>
+          <div className="col-md-4">
             <form>
               <input
                 type="text"
@@ -59,7 +59,7 @@ export default function Holidaze() {
                 autoComplete="off"
               />
               {isResultsFiltered && searchPhrase !== "" ? (
-                <div className=" searchresults ">
+                <div className=" dropdown ">
                   {filteredResults.length > 0 ? (
                     filteredResults.map((value, index) => {
                       return (
@@ -81,7 +81,7 @@ export default function Holidaze() {
               <br />
             </form>
           </div>
-          <div className="col-sm-4"></div>
+          <div className="col-md-4"></div>
         </div>
       </div>
     </div>

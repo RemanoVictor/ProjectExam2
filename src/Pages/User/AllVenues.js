@@ -43,15 +43,15 @@ export default function AllVenues() {
             })
           ) : (
             <div className="row">
-              <div className="col-sm-4"></div>
-              <div className="col-sm-4">
+              <div className="col-md-4"></div>
+              <div className="col-md-4">
                 <img
                   src="https://ec.europa.eu/eurostat/cache/infographs/airports/pictures/plane-loading.gif"
                   alt="loading"
                   width="50%"
                 />
               </div>
-              <div className="col-sm-4"></div>
+              <div className="col-md-4"></div>
             </div>
           )}
         </div>

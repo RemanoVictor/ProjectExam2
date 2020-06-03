@@ -38,13 +38,13 @@ export default function AddVenue() {
   return (
     <div className="[ container-fluid ]">
       <div className="[ row ] [ navigation ]">
-        <div className="[ col-sm-12 ]">
+        <div className="[ col-md-12 ]">
           <Nav />
         </div>
       </div>
 
       <div className="row">
-        <div className="col-sm-12">
+        <div className="col-md-12">
           <Modal
             isOpen={showModal}
             contentLabel="Minimal Modal Example"
@@ -61,8 +61,8 @@ export default function AddVenue() {
       </div>
 
       <div className="row Form addvenuecontanier">
-        <div className=" col-sm-4"></div>
-        <div className=" col-sm-4 Form">
+        <div className=" col-md-4"></div>
+        <div className=" col-md-4 Form">
           <h2> Add Venue </h2>
           <br></br>
           <form onSubmit={handleSubmit(submitData)}>
@@ -179,7 +179,7 @@ export default function AddVenue() {
             <input type="submit" />
           </form>
         </div>
-        <div className=" col-sm-4"></div>
+        <div className=" col-md-4"></div>
       </div>
     </div>
   );

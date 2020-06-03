@@ -1,7 +1,16 @@
-.message--Card__Image {
-    padding: 5%;
+.messageTitle {
+    text-align: center;
+    margin-top: 2%;
+
+    h2 {
+        font-size: 3em;
+    }
 }
 
-.message--Card--Body {
-    margin-top: 10%;
+.message--card {
+    margin-top: 5%;
+
+    &__body {
+        margin-top: 10%;
+    }
 }

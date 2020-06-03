@@ -22,7 +22,7 @@ export default function UserEnquiries() {
         </div>
       </div>
 
-      <div className="container userEnquiries">
+      <div className="container-fluid userEnquiries">
         <div className="row">
           {enqData !== undefined ? (
             enqData.map((value, index) => {

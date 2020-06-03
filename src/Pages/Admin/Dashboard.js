@@ -39,7 +39,7 @@ export default function Dashboard() {
     isloggedin === true ? (
     <div className="App">
       <div className=" container-fluid dashboardPage">
-        <div className=" col-sm-4 overlay2"></div>
+        <div className=" col-md-4 overlay2"></div>
 
         <div className="[ row ] [ navigation ]">
           <div className="[ col-sm-10 ]">
@@ -55,11 +55,11 @@ export default function Dashboard() {
         <div className="container-fluid dashboardContainer">
           <div className="overlay"></div>
           <div className="row">
-            <div className="col-sm-4"></div>
-            <div className="col-sm-4 welcome">
+            <div className="col-md-4"></div>
+            <div className="col-md-4 welcome">
               <h2>Welcome, {localStorage.getItem("username")}</h2>
             </div>
-            <div className="col-sm-4">
+            <div className="col-md-4">
               <iframe
                 title="world clock"
                 src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=en&size=medium&timezone=Europe%2FOslo"
@@ -75,15 +75,15 @@ export default function Dashboard() {
         <div className="row enquiriesSection">
           <div className="container-fluid">
             <div className="row">
-              <div className="col-sm-4"></div>
-              <div className="col-sm-4">
+              <div className="col-md-4"></div>
+              <div className="col-md-4">
                 <h3 className="enquiriesHeading"> Enquiries </h3>
               </div>
-              <div className="col-sm-4"></div>
+              <div className="col-md-4"></div>
             </div>
 
             <div className="row">
-              <div className="col-sm-6">
+              <div className="col-md-6">
                 <Enquiries
                   establishment={enqData.establishment}
                   clientName={enqData.clientName}
@@ -99,11 +99,11 @@ export default function Dashboard() {
         <div className="row messagesSection">
           <div className="container-fluid">
             <div className="row">
-              <div className="col-sm-4"></div>
-              <div className="col-sm-4">
+              <div className="col-md-4"></div>
+              <div className="col-md-4">
                 <h3 className="enquiriesHeading"> Messages </h3>
               </div>
-              <div className="col-sm-4"></div>
+              <div className="col-md-4"></div>
             </div>
             <div className="row">
               <div className="col-sm-6">

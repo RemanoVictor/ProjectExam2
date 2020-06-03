@@ -33,7 +33,7 @@ export default function Venue_Specific() {
         <div className=" container-fluid ">
           <img src={estData.imageUrl} alt="a preview of the venue" />
           <div className="row">
-            <div className="col-sm-6">
+            <div className="col-md-6">
               <VenueSpecific
                 name={estData.establishmentName}
                 max={estData.maxGuests}
@@ -43,7 +43,7 @@ export default function Venue_Specific() {
                 description={estData.description}
               />
             </div>
-            <div className="col-sm-6 map">
+            <div className="col-md-6 map">
               <LocationMap
                 latitude={estData.googleLat}
                 longitude={estData.googleLong}
