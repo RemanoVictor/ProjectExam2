@@ -2,8 +2,13 @@
     background-image: url("https://images.unsplash.com/photo-1543928810-0683973efda8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
     background-position: center;
     background-size: cover;
+    padding: 5%;
 }
 
-.enquiry--card__body {
-    margin-top: 8%;
+.enquiry--card {
+    margin-left: 2%;
+
+    .enquiry--card__image {
+        margin-top: 2%;
+    }
 }

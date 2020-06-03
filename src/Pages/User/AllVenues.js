@@ -24,7 +24,7 @@ export default function AllVenues() {
         </div>
       </div>
 
-      <div className="container">
+      <div className="container-fluid">
         <div className="row">
           {estData !== undefined ? (
             estData.map((value, index) => {

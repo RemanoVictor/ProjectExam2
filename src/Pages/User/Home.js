@@ -71,7 +71,7 @@ export default function Holidaze() {
                       );
                     })
                   ) : (
-                    <div>No Results</div>
+                    <div>No hotels found</div>
                   )}
                 </div>
               ) : (

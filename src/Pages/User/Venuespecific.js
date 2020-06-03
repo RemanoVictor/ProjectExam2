@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
 
-import LocationMap from "../../Components/mapcomponent";
-
-import Nav from "../../Components/nav2";
-
 import axios from "axios";
 
 import { ESTABLISHMENTSPECIFIC } from "../../Constants/constant";
+
+import LocationMap from "../../Components/mapcomponent";
+import Nav from "../../Components/nav2";
 import VenueSpecific from "../../Components/venuespecific";
 
 export default function Venue_Specific() {
