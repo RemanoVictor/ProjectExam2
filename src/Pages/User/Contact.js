@@ -50,8 +50,7 @@ export default function Contact() {
       </div>
 
       <div className="row contactContainer">
-        <div className="col-md-4 col-sm-2"></div>
-        <div className="col-md-4 col-sm-2 Form">
+        <div className="col-md-4 col-md-offset-4 Form">
           <h2>Contact Us</h2>
           <br></br>
           <form onSubmit={handleSubmit(submitData)}>
@@ -90,7 +89,6 @@ export default function Contact() {
             <input type="submit" className="btn btn-primary" />
           </form>
         </div>
-        <div className="col-md-4 col-sm-2"></div>
       </div>
     </div>
   );

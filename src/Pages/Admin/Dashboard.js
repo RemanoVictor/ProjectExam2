@@ -55,8 +55,7 @@ export default function Dashboard() {
         <div className="container-fluid dashboardContainer">
           <div className="overlay"></div>
           <div className="row">
-            <div className="col-md-4"></div>
-            <div className="col-md-4 welcome">
+            <div className="col-md-4 col-md-offset-4 welcome">
               <h2>Welcome, {localStorage.getItem("username")}</h2>
             </div>
             <div className="col-md-4">
@@ -75,11 +74,9 @@ export default function Dashboard() {
         <div className="row enquiriesSection">
           <div className="container-fluid">
             <div className="row">
-              <div className="col-md-4"></div>
-              <div className="col-md-4">
+              <div className="col-md-4 col-md-offset-4">
                 <h3 className="enquiriesHeading"> Enquiries </h3>
               </div>
-              <div className="col-md-4"></div>
             </div>
 
             <div className="row">
@@ -99,11 +96,9 @@ export default function Dashboard() {
         <div className="row messagesSection">
           <div className="container-fluid">
             <div className="row">
-              <div className="col-md-4"></div>
-              <div className="col-md-4">
+              <div className="col-md-4 col-md-offset-4">
                 <h3 className="enquiriesHeading"> Messages </h3>
               </div>
-              <div className="col-md-4"></div>
             </div>
             <div className="row">
               <div className="col-sm-6">

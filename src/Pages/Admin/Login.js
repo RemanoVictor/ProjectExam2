@@ -43,8 +43,7 @@ export default function Login(props) {
         </div>
 
         <div className="row">
-          <div className="[ col-md-4 ]"></div>
-          <div className="[ col-md-4 ]">
+          <div className="col-md-4 col-md-offset-4">
             <h2> Login </h2>
             <form onSubmit={handleSubmit}>
               <p> Enter Username </p>
@@ -68,7 +67,6 @@ export default function Login(props) {
               <input type="submit" className="btn" />
             </form>
           </div>
-          <div className="[ col-md-4 ]"></div>
         </div>
       </div>
     </>

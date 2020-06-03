@@ -61,8 +61,7 @@ export default function AddVenue() {
       </div>
 
       <div className="row Form addvenuecontanier">
-        <div className=" col-md-4"></div>
-        <div className=" col-md-4 Form">
+        <div className=" col-md-4 col-md-offset-4 Form">
           <h2> Add Venue </h2>
           <br></br>
           <form onSubmit={handleSubmit(submitData)}>
@@ -179,7 +178,6 @@ export default function AddVenue() {
             <input type="submit" />
           </form>
         </div>
-        <div className=" col-md-4"></div>
       </div>
     </div>
   );

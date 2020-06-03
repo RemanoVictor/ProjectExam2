@@ -25,11 +25,9 @@ export default function ContactMessages() {
       </div>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-md-4"></div>
-          <div className="col-md-4 messageTitle">
+          <div className="col-md-4 col-md-offset-4 messageTitle">
             <h2> Messages </h2>
           </div>
-          <div className="col-md-4"></div>
         </div>
         <div className="row">
           {messageData !== undefined ? (
