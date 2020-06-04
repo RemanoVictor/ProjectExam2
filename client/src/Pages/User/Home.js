@@ -48,13 +48,23 @@ export default function Holidaze() {
         <div className=" row ">
           <div className="col-md-4 col-md-offset-4">
             <form>
+            {estData === undefined ?(
               <input
+                type="text"
+                name="username"                
+                className="form-control"
+                autoComplete="off"
+                
+              />
+            ):( <input
                 type="text"
                 name="username"
                 onChange={handleFiltering}
                 className="form-control"
                 autoComplete="off"
-              />
+              />)
+              }
+             
               {isResultsFiltered && searchPhrase !== "" ? (
                 <div className=" dropdown ">
                   {filteredResults.length > 0 ? (
