@@ -150,13 +150,12 @@ export default function AddVenue() {
             <br></br>
             <div className="row">
               <div className="col-md-6">
-                <label htmlFor="true">True</label>
+                <label htmlFor="true" className="radioInput">True</label>
                 <input
                   type="radio"
                   id="true"
                   name="selfCatering"
-                  value="true"
-                  className="radioInput"
+                  value="true"                  
                   ref={register({ required: true })}
                 />
               </div>
@@ -168,7 +167,7 @@ export default function AddVenue() {
                   type="radio"
                   id="false"
                   name="selfCatering"
-                  value="false"
+                  value="false"                  
                   ref={register({ required: true })}
                 />
               </div>
@@ -185,7 +184,7 @@ export default function AddVenue() {
             />
             {errors.id && <p> Please enter an ID </p>}
 
-            <input type="submit" />
+            <input type="submit" className="btn" />
           </form>
         </div>
       </div>

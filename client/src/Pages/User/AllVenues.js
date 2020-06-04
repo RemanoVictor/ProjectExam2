@@ -27,8 +27,8 @@ export default function AllVenues() {
       <div className="container-fluid venuebanner">
         <div className="row venuebanner--container">
           <img
-            src="https://lh3.googleusercontent.com/proxy/UKoyDMKqwyhfUlq9_Soq2Sq558m54IPE5YnUUgBIyPU-jT6THds2ClHuObZtqAr1wfVCsOPtz9rBaecyQCkUyS9eboI0Mi1kiAAG_cA4tAVskeg_CdltPCtG8Q"
-            alt="city image"
+            src="https://images.unsplash.com/photo-1502144125741-62af1f0f16de?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+            alt="city"
             className="venuebanner--container__image"
           />
           <h3 className="venuebanner--container__text">

@@ -25,14 +25,13 @@ export default function ContactMessages() {
       </div>
 
       <div className="container-fluid messagebanner">
-        <div className="messagebanner--container">
-          <h3 className="messagebanner--container__text">Messages</h3>
+        <div className="row messagebanner--container">          
           <img
             src="https://images.pexels.com/photos/1933239/pexels-photo-1933239.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
             alt=" Bergen,Norway"
             className="messagebanner--container__image"
           />
-
+          <h3 className="messagebanner--container__text">Messages</h3>
           <div className="messagebanner--container__overlay"></div>
         </div>
       </div>

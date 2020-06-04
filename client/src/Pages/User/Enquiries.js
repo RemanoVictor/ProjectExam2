@@ -127,7 +127,7 @@ export default function VenueEnquiry() {
               ref={register({ required: true })}
             />
 
-            <input type="submit" className="btn btn-primary" />
+            <input type="submit" className="btn" />
           </form>
         </div>
       </div>
