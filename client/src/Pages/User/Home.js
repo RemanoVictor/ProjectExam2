@@ -33,19 +33,19 @@ export default function Holidaze() {
     <div>
       <div className="container-fluid landingPage">
         <div className="col-md-4 overlay"></div>
-        <div className="[ row ] [ navigation ]">
-          <div className="[ col-sm-12 ]">
+        <div className=" row navigation ">
+          <div className=" col-sm-12 ">
             <Nav />
           </div>
         </div>
 
-        <div className="[ row ]">
+        <div className=" row ">
           <div className="col-md-4 col-md-offset-4">
-            <h2 className="[ welcomeHeading ]"> Search accomodation</h2>
+            <h2 className=" welcomeHeading "> Search accomodation</h2>
           </div>
         </div>
 
-        <div className="[ row ]">
+        <div className=" row ">
           <div className="col-md-4 col-md-offset-4">
             <form>
               <input
