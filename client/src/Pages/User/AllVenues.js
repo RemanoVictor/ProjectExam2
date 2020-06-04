@@ -56,11 +56,15 @@ export default function AllVenues() {
               );
             })
           ) : (
-            <img
-              src="https://ec.europa.eu/eurostat/cache/infographs/airports/pictures/plane-loading.gif"
-              alt="loading"
-              width="50%"
-            />
+            <div className="row">
+              <div className="col-md-4 col-md-offset-4">
+                <img
+                  src="https://ec.europa.eu/eurostat/cache/infographs/airports/pictures/plane-loading.gif"
+                  alt="loading"
+                  width="50%"
+                />
+              </div>
+            </div>
           )}
         </div>
       </div>
