@@ -18,31 +18,23 @@ If you run into any problems, please let your tutor know.
 
 The provided HTML files are a way to test sending data to the server endpoints, but you can't send data to the server in a React or Vue project that way. Examples of posting data in the frontend frameworks will be provided.
 
-<<<<<<< HEAD
+
 -   the contact form should send data to http://localhost/hotel-api/contact-success.php
 -   the enquiry form should send data to http://localhost/hotel-api/enquiry-success.php
 -   the add establishment form should send data to http://localhost/hotel-api/add-establishments-success.php
-=======
-- the contact form should send data to http://localhost/hotel-api/contact-success.php
-- the enquiry form should send data to http://localhost/hotel-api/enquiry-success.php
-- the add establishment form should send data to http://localhost/hotel-api/add-establishments-success.php
->>>>>>> 28ccfc8fd056e733599c02bcc039f1b73b1b940d
+
+
 
 Store your JSON files inside your frontend project's public folder, and ensure that your PHP files are reading and writing to these files. The section you need to update with the correct filepath is file_get_contents('establishments.json') and file_put_contents('establishments.json', \$jsonData); as these are what are writing and reading your JSON files.
 
 You can fetch the contents of the json files by using the following URLs:
 
-<<<<<<< HEAD
+
 -   http://localhost/hotel-api/get-establishments.php
 -   http://localhost/hotel-api/get-establishment.php
 -   http://localhost/hotel-api/get-enquiries.php
 -   http://localhost/hotel-api/get-contacts.php
-=======
-- http://localhost/hotel-api/get-establishments.php
-- http://localhost/hotel-api/get-establishment.php
-- http://localhost/hotel-api/get-enquiries.php
-- http://localhost/hotel-api/get-contacts.php
->>>>>>> 28ccfc8fd056e733599c02bcc039f1b73b1b940d
+
 
 ## The Code
 
