@@ -1,0 +1,49 @@
+.enquiryContainer {
+    background-image: url("https://images.unsplash.com/photo-1543928810-0683973efda8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+    background-position: center;
+    background-size: cover;
+    padding: 5%;
+}
+
+.enquirybanner {
+    &--container {
+        position: relative;
+
+        &__overlay {
+            background: rgba(000, 000, 000, 0.5);
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: 0;
+            padding: 0;
+            margin: 0;
+        }
+
+        &__text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            font-size: 2.5em;
+        }
+
+        &__image {
+            height: 50vh;
+
+        }
+    }
+}
+
+.userenquiries {
+    &--container {
+        padding: 5%;
+
+        &__image {
+            width: 100%;
+        }
+    }
+}
