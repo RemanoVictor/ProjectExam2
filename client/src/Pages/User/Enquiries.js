@@ -45,6 +45,7 @@ export default function VenueEnquiry() {
           className="Modal"
           overlayClassName="Overlay1"
           onRequestClose={handleCloseModal}
+          ariaHideApp={false}
         >
           <div>
             <h3>

@@ -51,6 +51,7 @@ export default function AddVenue() {
             className="Modal"
             overlayClassName="Overlay1"
             onRequestClose={handleCloseModal}
+            ariaHideApp={false}
           >
             <div>
               <h3> Your venue has been successfully added!</h3>

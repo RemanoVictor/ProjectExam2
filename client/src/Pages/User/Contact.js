@@ -41,6 +41,7 @@ export default function Contact() {
           className="Modal"
           overlayClassName="Overlay1"
           onRequestClose={handleCloseModal}
+          ariaHideApp={false}
         >
           <div>
             <h3>Thank you for reaching out! We will get back to you shortly</h3>
