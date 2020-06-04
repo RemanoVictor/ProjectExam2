@@ -57,7 +57,7 @@ export default function VenueEnquiry() {
       </div>
 
       <div className="row enquiryContainer">
-        <div className="col-md-4 col-md-offset-4Form">
+        <div className="col-md-4 col-md-offset-4 Form">
           <form onSubmit={handleSubmit(submitEnq)}>
             <h2> Enquiry Form </h2>
             <br></br>
