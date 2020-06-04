@@ -2,7 +2,7 @@
 header('Access-Control-Allow-Origin: *'); 
 // header('Content-Type: application/json');
 
-$establishmentsList = file_get_contents('.././client/public/establishments.json');
+$establishmentsList = file_get_contents('./client/public/establishments.json');
 
 $json = json_decode($establishmentsList);
 
