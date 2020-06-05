@@ -11,7 +11,6 @@ export default function AllVenues() {
 
   useEffect(() => {
     axios.get(ESTABLISHMENTS).then((estJSON) => {
-      console.log(estJSON.data);
       setestData(estJSON.data);
     });
   }, []);

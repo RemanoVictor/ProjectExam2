@@ -13,8 +13,7 @@ export default function Holidaze() {
   const [isResultsFiltered, setisResultsFiltered] = useState(false);
 
   useEffect(() => {
-    axios.get(ESTABLISHMENTS).then((estJSON) => {
-      console.log(estJSON.data);
+    axios.get(ESTABLISHMENTS).then((estJSON) => {      
       setestData(estJSON.data);
     });
   }, []);

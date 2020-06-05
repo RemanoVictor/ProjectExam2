@@ -9,8 +9,7 @@ import Nav from "../../Components/nav";
 export default function ContactMessages() {
   const [messageData, setmessageData] = useState(undefined);
   useEffect(() => {
-    axios.get(CONTACTS).then((messageJSON) => {
-      console.log(messageJSON);
+    axios.get(CONTACTS).then((messageJSON) => {      
       setmessageData(messageJSON.data);
     });
   }, []);

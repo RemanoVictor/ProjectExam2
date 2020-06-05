@@ -9,8 +9,7 @@ import Nav from "../../Components/nav";
 export default function UserEnquiries() {
   const [enqData, setenqData] = useState(undefined);
   useEffect(() => {
-    axios.get(ENQUIRIES).then((enqJSON) => {
-      console.log(enqJSON);
+    axios.get(ENQUIRIES).then((enqJSON) => {      
       setenqData(enqJSON.data);
     });
   }, []);
